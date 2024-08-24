@@ -92,7 +92,7 @@ public class GenerateStreamData {
 
             // Send JSON record to Kafka
             TestKafkaProducer.sendDataToKafka("sample", jsonRecord);
-            Thread.sleep(3000);
+            Thread.sleep(1000);
 
             
             System.out.println(jsonRecord);

@@ -11,12 +11,9 @@ public class TestKafkaProducer {
 
 	public static void main(String[] args) throws Exception {
 
-		String topicName = "sample";
-
-		Producer<String, String> producer = sendDataToKafka(topicName, "Welcome To SSN");
-
-		System.out.println("Data sent to Kafka");
-		producer.close();
+		
+		GenerateStreamData.generateRandomStreamData(1000); 
+	
 
 	}
 
@@ -43,4 +40,6 @@ public class TestKafkaProducer {
 		producer.send(record);
 		return producer;
 	}
+
+	
 }
